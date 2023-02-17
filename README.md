@@ -2,7 +2,8 @@
 
 ```python
 > npx create-next-app .
-> npm install -legacy-peer-deps
+> npm install -legacy-peer-deps 
+> npm install -g @sanity/cli
 
 > What are libraries used?
 - @sanity/client, @sanity/image-url
