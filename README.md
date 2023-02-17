@@ -2,7 +2,10 @@
 
 ```python
 > npx create-next-app .
-> npm install -legacy-peer-deps
+> npm install -legacy-peer-deps 
+> npm install -g @sanity/cli
+> cd sanity_ecommrce
+> sanity run dev
 
 > What are libraries used?
 - @sanity/client, @sanity/image-url
@@ -11,3 +14,5 @@
 - react, react-dom, react-host-toast, react-icons
 
 ```
+
+# Create Schemas in sanity_ecommerce
