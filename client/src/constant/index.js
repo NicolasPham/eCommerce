@@ -17,3 +17,6 @@ export const navItemRight = [
         path: "/stores"
     },
 ]
+
+export const footerCats = ["Women", "Men", "Children", "Accessories", "New Arrivale"]
+export const footerLinks =["FAQ", "Pages", "Stores", "Compare", "Cookies"]
