@@ -1,0 +1,35 @@
+nav {
+    display: flex;
+    justify-content: center;
+
+    .wrapper {
+        height: 80px;
+        width: 100%;
+        padding: 10px 30px;
+        justify-content: space-between;
+
+        .left {
+            gap: 30px;
+        }
+
+        .center {
+            .link {
+                align-items: center;
+                gap: 10px;
+            }
+
+            img {
+                width: 80px;
+                border-radius: 50%;
+            }
+        }
+
+        .right {
+            gap: 30px;
+
+            .icons {
+                gap: 10px;
+            }
+        }
+    }
+}

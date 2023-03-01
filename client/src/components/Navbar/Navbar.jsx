@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import './navbar.scss'
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
@@ -6,14 +8,14 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import { navItem } from '../../constant'
+import { navItemLeft, navItemRight } from '../../constant'
 
 
 const Navbar = () => {
     return (
         <nav>
-            <div className="wrapper">
-                <div className="left">
+            <div className="wrapper flexRow">
+                <div className="left flexRow">
                     <div className="item">
                         <img src="/img/en.png" alt="en" />
                         <KeyboardArrowDownIcon />
@@ -22,14 +24,38 @@ const Navbar = () => {
                         <span>USD</span>
                         <KeyboardArrowDownIcon />
                     </div>
-                    ${for (let item in navItem) {
-                        
-                    }}
+                    {navItemLeft.map((item, index) => (
+                        <div className="item" key={index}>
+                            <Link className='link' to={`/products/${item}`}>{item}</Link>
+                        </div>
+                    ))}
                 </div>
 
-                <div className="center"></div>
+                <div className="center flexRow">
+                    <Link className='link flexRow' to="/">
+                        <img src="/img/logo.png" alt="logo" />
+                        <span>NICOSTORE</span>
+                    </Link>
+                </div>
 
-                <div className="right"></div>
+                <div className="right flexRow">
+                    {navItemRight.map((item, index) => (
+                        <div className="item">
+                            <Link className='link' to={item.path}>{item.name}</Link>
+                        </div>
+                    ))}
+
+                    <div className="icons flexRow">
+                        <SearchIcon />
+                        <PersonOutlineOutlinedIcon />
+                        <FavoriteBorderOutlinedIcon />
+
+                        <div className="cartIcon">
+                            <ShoppingCartOutlinedIcon />
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     )
