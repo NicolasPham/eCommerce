@@ -1,0 +1,54 @@
+footer {
+  position: relative;
+
+  .wrapper {
+    margin: 10px 70px;
+    .item {
+      flex: 1;
+      color: #555;
+
+      .item_link {
+        gap: 15px;
+      }
+
+      h1 {
+        margin: 0 0 15px 0;
+        font-size: 24px;
+      }
+
+      p {
+        margin: 0;
+        padding: 0 40px 0 0;
+        text-align: justify;
+      }
+    }
+  }
+
+  .bottom {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 70px;
+
+    .left {
+      align-items: center;
+      gap: 20px;
+
+      .link {
+        font-size: 30px;
+        font-weight: 600;
+        color: #2879fe;
+      }
+
+      span {
+        color: #777;
+        font-size: 12px;
+      }
+    }
+
+    .right {
+      img {
+        height: 50px;
+      }
+    }
+  }
+}
