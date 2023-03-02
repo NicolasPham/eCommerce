@@ -1,7 +1,17 @@
 .feature {
     margin: 40px;
 
-    .title {}
+    .title {
+            justify-content: space-between;
+    
+            h1 {
+                flex: 1;
+            }
+    
+            p {
+                flex: 2;
+            }
+        }
 
     .cards {}
 }
