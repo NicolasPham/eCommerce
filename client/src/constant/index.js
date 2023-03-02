@@ -18,5 +18,5 @@ export const navItemRight = [
     },
 ]
 
-export const footerCats = ["Women", "Men", "Children", "Accessories", "New Arrivale"]
+export const footerCats = ["Women", "Men", "Children", "Accessories", "New Arrival"]
 export const footerLinks =["FAQ", "Pages", "Stores", "Compare", "Cookies"]
