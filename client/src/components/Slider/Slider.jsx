@@ -15,11 +15,11 @@ const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const prevSlide = () => {
-        setCurrentSlide(currentSlide == 0 ? 2 : currentSlide - 1)
+        setCurrentSlide(currentSlide === 0 ? 2 : currentSlide - 1)
         console.log(currentSlide)
     }
     const nextSlide = () => {
-        setCurrentSlide(currentSlide == 2 ? 0 : currentSlide + 1)
+        setCurrentSlide(currentSlide === 2 ? 0 : currentSlide + 1)
         console.log(currentSlide)
     }
 
@@ -28,7 +28,7 @@ const Slider = () => {
             <div className="container">
                 <div className="img flexRow" style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
                     {data.map((img, index) => (
-                        <img src={img} key={index} />
+                        <img src={img} key={index} alt="" />
                     ))}
                 </div>
                 <div className="icons">

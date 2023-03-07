@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import "./feature.scss"
 
 import { data } from '../../constant/featuredData.js'
