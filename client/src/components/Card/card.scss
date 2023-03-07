@@ -1,0 +1,41 @@
+.card {
+
+    .card_wrapper {
+        position: relative;
+
+
+        img {
+            height: 300px;
+            width: 200px;
+            object-fit: cover;
+        }
+        .desc {
+
+            p {
+                font-size: 14px;
+                margin: 0;
+            }
+            .price {
+                gap: 15px;
+                font-size: 12px;
+
+                .old {
+                    color: #888;
+                }
+                .new {}
+            }
+        }
+
+        .newSeason {
+            font-size: 12px;
+            color: var(--color1);
+            padding: 0 4px;
+            background-color: white;
+            margin: 0;
+            position: absolute;
+            z-index: 2;
+            top: 5px;
+            left: 5px;
+        }
+    }
+}

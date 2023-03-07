@@ -3,6 +3,9 @@
 
     .title {
             justify-content: space-between;
+            align-items: center;
+            margin: 0 100px;
+            text-align: justify;
     
             h1 {
                 flex: 1;
@@ -10,8 +13,14 @@
     
             p {
                 flex: 2;
+                color: #555;
             }
         }
 
-    .cards {}
+    .cards {
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
 }
