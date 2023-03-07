@@ -14,11 +14,11 @@ const Subcribe = () => {
             <button>Subcribe</button>
         </form>
 
-        <div className="icons">
-            <AiFillFacebook />
-            <AiOutlineTwitter />
-            <AiFillInstagram />
-            <BsPinterest />
+        <div className="icons flexRow">
+            <AiFillFacebook className='icon'/>
+            <AiOutlineTwitter className='icon'/>
+            <AiFillInstagram className='icon'/>
+            <BsPinterest className='icon'/>
         </div>
     </div>
   )

@@ -3,17 +3,49 @@
     height: 100px;
     justify-content: center;
     align-items: center;
-    gap: 100px;
-    background-color: var(--color3);
+    gap: 150px;
+    background-color: var(--color4);
+    margin-bottom: 30px;
 
 
-    span {}
-
-    form {
-
-        input {}
-        button {}
+    span {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--color1);
     }
 
-    .icons {}
+    form {
+        display: flex;
+
+        input {
+            padding: 4px 8px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            color: var(--color1);
+            outline: none;
+        }
+        button {
+            border: none;
+            background-color: var(--color1);
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+
+        }
+    }
+
+    .icons {
+        font-size: 24px;
+        gap: 10px;
+        color: var(--color1);
+
+        .icon {
+            cursor: pointer;
+
+            :hover {
+                color: var(--color2);
+            }
+        }
+    }
 }
