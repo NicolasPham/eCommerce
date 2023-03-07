@@ -13,7 +13,7 @@ const Feature = ({ type }) => {
                 <p>Here you will find the latest and greatest fashion items from our store. Whether you're looking for a new dress, a stylish pair of shoes, or the perfect accessory to complete your look, we have something for everyone. Our featured products are carefully selected to ensure that you always look your best. Shop now and find the perfect item for any occasion!</p>
             </div>
 
-            <div className="cards">
+            <div className="cards flexRow">
                 {data.map(item => (
                     <Card item={item} key={item.id} />
                 ))}
