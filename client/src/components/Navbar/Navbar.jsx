@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './navbar.scss'
 
@@ -9,9 +9,13 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import { navItemLeft, navItemRight } from '../../constant'
+import Cart from '../Cart/Cart';
 
 
 const Navbar = () => {
+
+    const [openCart, setOpenCart] = useState(true);
+
     return (
         <nav>
             <div className="wrapper flexRow">
@@ -50,13 +54,16 @@ const Navbar = () => {
                         <PersonOutlineOutlinedIcon />
                         <FavoriteBorderOutlinedIcon />
 
-                        <div className="cartIcon">
+                        <div className="cartIcon" onClick={() => setOpenCart(!openCart)}>
                             <ShoppingCartOutlinedIcon />
                             <span>0</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {openCart && <Cart />}
+
         </nav>
     )
 }

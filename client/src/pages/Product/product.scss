@@ -1,6 +1,7 @@
 .product {
     padding: 30px 50px;
     gap: 40px;
+
     .left {
         flex: 1;
         gap: 10px;
@@ -36,6 +37,7 @@
             margin: 0;
             font-size: 24px;
         }
+
         h2 {
             font-weight: 300;
             color: var(--color2);
@@ -59,7 +61,13 @@
                 text-align: center;
                 text-justify: center;
                 cursor: pointer;
+
+                &:hover {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
             }
+
             span {}
         }
 
@@ -76,13 +84,19 @@
             font-weight: 500;
             padding: 10px;
             margin-bottom: 30px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--color1);
+                color: var(--color3)
+            }
         }
 
         .favourite {
             gap: 20px;
             font-size: 14px;
             color: var(--color2);
-            margin-bottom: 30px;
+            margin-bottom: 80px;
 
             .item {
                 display: flex;
@@ -101,6 +115,18 @@
 
             p {
                 margin: 0;
+            }
+        }
+
+        .details {
+            font-size: 14px;
+            color: gray;
+            margin-top: 20px;
+            width: fit-content;
+            cursor: pointer;
+
+            hr {
+                width: 100%;
             }
         }
     }

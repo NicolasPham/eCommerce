@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import "./product.scss"
 
-import {BiCartAdd} from 'react-icons/bi'
-import {FaHeart,FaRegHeart, FaBalanceScaleLeft} from 'react-icons/fa'
+import { BiCartAdd } from 'react-icons/bi'
+import { FaHeart, FaRegHeart, FaBalanceScaleLeft } from 'react-icons/fa'
 
 const Product = () => {
 
     const [selectedImg, setSelectedImg] = useState(0)
     const [quantity, setQuantity] = useState(0)
-    const [wishList, setWishList]= useState(false);
+    const [wishList, setWishList] = useState(false);
 
     const imagesData = [
         "https://images.unsplash.com/photo-1504593811423-6dd665756598?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -18,22 +18,22 @@ const Product = () => {
     //function for minus quantity:
     const handleMinus = (e) => {
         e.preventDefault();
-        if (quantity > 0) {
-            setQuantity(quantity - 1)
+        if (quantity > 1) {
+            setQuantity((prev) => prev - 1)
         }
     }
 
     const handleAdd = (e) => {
         e.preventDefault();
-        setQuantity(quantity + 1)
+        setQuantity((prev) => prev + 1)
     }
 
     return (
         <main className='product flexRow'>
             <div className="left flexRow">
                 <div className="images flexCol">
-                    <img src={imagesData[0]} alt="" onClick={() => setSelectedImg(0)}/>
-                    <img src={imagesData[1]} alt="" onClick={() => setSelectedImg(1)}/>
+                    <img src={imagesData[0]} alt="" onClick={() => setSelectedImg(0)} />
+                    <img src={imagesData[1]} alt="" onClick={() => setSelectedImg(1)} />
                 </div>
                 <div className="mainImg">
                     <img src={imagesData[selectedImg]} alt="" />
@@ -51,17 +51,17 @@ const Product = () => {
                 </div>
 
                 <button className='addCart'>
-                    <BiCartAdd/>
+                    <BiCartAdd />
                     <span>ADD TO CART</span>
                 </button>
 
                 <div className="favourite flexRow">
                     <div className="item" onClick={() => setWishList(!wishList)}>
-                        {!wishList ? <FaRegHeart/> : <FaHeart/>}
+                        {!wishList ? <FaRegHeart /> : <FaHeart />}
                         <span>ADD TO WISHLIST</span>
                     </div>
                     <div className="item">
-                        <FaBalanceScaleLeft/>
+                        <FaBalanceScaleLeft />
                         <span>ADD TO COMPARE</span>
                     </div>
                 </div>
@@ -73,6 +73,14 @@ const Product = () => {
                 </div>
 
                 <hr />
+
+                <div className="details flexCol">
+                    <span>DESCRIPTION</span>
+                    <hr />
+                    <span>ADDITIONAL INFORMATION</span>
+                    <hr />
+                    <span>FAQ</span>
+                </div>
 
 
 
