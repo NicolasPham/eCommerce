@@ -1,6 +1,7 @@
 nav {
   display: flex;
   justify-content: center;
+  position: relative;
 
   .wrapper {
     height: 70px;
@@ -12,6 +13,7 @@ nav {
       display: flex;
       align-items: center;
     }
+
     .left {
       gap: 20px;
     }
