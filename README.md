@@ -15,13 +15,18 @@
 
 ```
 
-# Create Schemas in sanity_ecommerce
+# MYSQL
 
-```python
-import banner from './banner'
-import product from './product'
+```sql
+- Install strapi:
+    > npx create-strapi-app@latest .
+    > yarn develop (remember to reconfigure mysql installer-community - authentication to be able to run)
 
-export const schemaTypes = [product, banner]
+- In Strapi Dashboard:
+    > Content-type Builder: create collection types (categories, products, subcategories,etc.)
+    > Create relationship between those table
+    > Create API token in Setting
+
 
 
 
