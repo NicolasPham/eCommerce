@@ -1,9 +1,28 @@
 import "./feature.scss"
+import axios from 'axios';
 
-import { data } from '../../constant/featuredData.js'
 import Card from '../Card/Card.jsx'
+import { useEffect, useState } from "react"
 
 const Feature = ({ type }) => {
+
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(process.env.REACT_APP_API_URL + "/products?populate=*", {
+                    headers: {
+                        Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
+                    }
+                });
+                setData(response.data.data)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchData();
+    }, [])
 
     return (
         <section className='feature'>

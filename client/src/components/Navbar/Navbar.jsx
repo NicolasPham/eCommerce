@@ -14,7 +14,7 @@ import Cart from '../Cart/Cart';
 
 const Navbar = () => {
 
-    const [openCart, setOpenCart] = useState(true);
+    const [openCart, setOpenCart] = useState(false);
 
     return (
         <nav>
@@ -44,7 +44,7 @@ const Navbar = () => {
 
                 <div className="right flexRow">
                     {navItemRight.map((item, index) => (
-                        <div className="item">
+                        <div className="item" key={index}>
                             <Link className='link' to={item.path}>{item.name}</Link>
                         </div>
                     ))}

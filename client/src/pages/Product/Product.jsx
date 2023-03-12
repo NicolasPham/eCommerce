@@ -45,7 +45,7 @@ const Product = () => {
                 <p className="desc">Some description here</p>
 
                 <div className="quantity flexRow">
-                    <button onClick={handleMinus} disabled={quantity == 0 ? true : false}>-</button>
+                    <button onClick={handleMinus} disabled={quantity === 0 ? true : false}>-</button>
                     <span>{quantity}</span>
                     <button onClick={handleAdd}>+</button>
                 </div>

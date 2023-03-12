@@ -15,7 +15,7 @@
 
 ```
 
-# MYSQL
+# STRAPI
 
 ```sql
 - Install strapi:
@@ -26,8 +26,13 @@
     > Content-type Builder: create collection types (categories, products, subcategories,etc.)
     > Create relationship between those table
     > Create API token in Setting
+- Store Strapi_API_Token and API_URL in .env file
+- Use "axios" to get data
+    - When performing a request to Strapi's REST API, the API token should be added to the request's Authorization header with the following syntax: 
+        > "bearer " +  process.env.API_TOKEN
 
 
 
+2:00
 
 ```
